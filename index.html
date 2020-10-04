@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/06c4095869.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <script src="js/store.js" async></script>
+  <script src="js/search.js" charset="utf-8"></script>
+
+  <title>Yanme'e Kitchen</title>
+</head>
+
+<body>
+
+
+      <a class="shopping-cart-icon" id="myBtn"><i class="fas fa-shopping-cart"></i></a>
+
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <section class="container modal-content-section">
+            <h2 class="section-header"><i class="fas fa-shopping-cart"></i>CART</h2>
+            <div class="cart-row">
+              <span class="cart-item cart-header cart-column">ITEM</span>
+              <span class="cart-price cart-header cart-column">PRICE</span>
+              <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+
+              <div class="cart-items"></div>
+              <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+              </div>
+              <button class="btn btn-primary btn-purchase" type="button" name="button">Proceed with Checkout</button>
+          </section>
+        </div>
+      </div>
+      </div>
+
+
+  <center>
+    <div class="header-container">
+      <h1 class="header-text">Yanme'e Kitchen</h1>
+      <button class="header-btn"><a href="#menu">See Menu</a></button>
+      <button class="header-btn"><a href="contact.html">About Us</a></button>
+    </div>
+  </center>
+
+
+
+  <img class="dishes-img" src="images/zig-zag.png" alt="">
+  <div class="dishes-container">
+
+    <div class="row">
+
+      <section class="container content-section" id="menu">
+        <h2 class="section-header">Menu</h2>
+        <div class="section-hr"></div>
+
+        <!-- SearchBar -->
+        <div class="search-container">
+          <input type="text" class="search-dishes" placeholder="Search Dishes" id="search-box" onkeyup="search();" onchange="search();" list="searches">
+          <datalist id="searches">
+            <!-- <option value="Grab&Crab"></option>
+            <option value="Acrod"></option>
+            <option value="P-Blood Cheesecake"></option> -->
+          </datalist>
+        </div>
+
+        <div class="shop-items row">
+
+          <div class="col-12 text-center d-none" id="no-dish">
+            <h4>Sorry! No such dish/dishes available.</h4>
+          </div>
+
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="grab and crab,Grab&Crab, grab & crab, crab, grab">
+              <span class="shop-item-title">Grab&Crab</span>
+              <img class="shop-item-image" src="images/crab.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$15</span> <span class="shop-item-price">$12.5</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="acrod">
+              <span class="shop-item-title">Acrod</span>
+              <img class="shop-item-image delayed" src="images/acrod.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$25</span> <span class="shop-item-price">$20</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="P-Blood Cheesecake, cockroach, blood, cheesecake">
+              <span class="shop-item-title">P-Blood Cheesecake</span>
+              <img class="shop-item-image" src="images/cake.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$12</span> <span class="shop-item-price">$9.9</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-items row">
+          <div class="shop-item col-3">
+            <div class="search-opt" a="snail, brownie, Snail, Brownie, Snail Brownie, snail brownie">
+              <span class="shop-item-title">Snail Brownie</span>
+              <img class="shop-item-image delayed" src="images/brownie.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$15</span> <span class="shop-item-price">$13.2</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="burger, Burger, Awesome, awesome burger">
+              <span class="shop-item-title">Awesome Burger</span>
+              <img class="shop-item-image" src="images/burger.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$20</span> <span class="shop-item-price">$17.3</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="chocolate, Chocolate">
+              <span class="shop-item-title">chocolate</span>
+              <img class="shop-item-image delayed" src="images/chocolate.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$10</span> <span class="shop-item-price">$7.9</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+        <div class="shop-items row">
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="Octopus, octopus">
+              <span class="shop-item-title">Octopus</span>
+              <img class="shop-item-image" src="images/octopus.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$18</span> <span class="shop-item-price">$16.5</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="Pie, pie">
+              <span class="shop-item-title">Pie</span>
+              <img class="shop-item-image delayed" src="images/pie.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$12</span> <span class="shop-item-price">$10.2</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="shop-item col-3">
+            <div class="search-opt" a="Taco, taco">
+              <span class="shop-item-title">Taco</span>
+              <img class="shop-item-image" src="images/taco.png" alt="">
+              <p class="shop-item-description">It's prepared as a cream-based soup with tofu and black olives which look as fish-eye</p>
+              <div class="shop-item-details">
+                <span class="shop-item-mainprice">$16</span> <span class="shop-item-price">$13.8</span>
+                <button class="shop-item-button" type="button" name="button">ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+  <!-- Footer -->
+  <!--
+  <div class="footer" id="full-footer">
+    <p>&copy; Copyright 3020</p>
+  </div>
+-->
+
+  <script>
+    var modal = document.getElementById("myModal");
+
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
